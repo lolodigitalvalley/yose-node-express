@@ -28,5 +28,17 @@ describe('Passing the Power of Two level:', function() {
             done(); 
         });
     });
+    it('returns the is not number', function(done) {
+        request('http://localhost:7000/primeFactors?number=hello', function(error, response, body) {
+            expect(body).to.equal(JSON.stringify( 
+                {
+                    "number" : "hello",
+                    "error" : "not a number"
+                } 
+            ));
+            
+            done(); 
+        });
+    });
    
 });
