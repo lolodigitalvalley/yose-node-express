@@ -13,5 +13,8 @@ describe('Prime factors decomposition', function() {
 	it('can decompose 27', function() {
 		expect(primeFactorsOf(27)).to.equal([3, 3, 3]);
 	});
+	it('can decompose 300', function() {
+		expect(primeFactorsOf(27)).to.equal([2, 2, 3, 5, 5]);
+	});
 
 });
